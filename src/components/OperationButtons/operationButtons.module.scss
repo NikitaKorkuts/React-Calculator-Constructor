@@ -1,0 +1,17 @@
+@import '../../assets/styles/_variables.scss';
+
+.operationButtons {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    @extend %regular-btn;
+
+    width: 52px;
+    height: 48px;
+  }
+
+  &_noEffects {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,41 @@
+.modeSwitch {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  height: 38px;
+  background: #F3F4F6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  &__mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: calc(50% - 3px);
+    height: calc(100% - 5px);
+    color: #4D5562;
+    font-size: 14px;
+    font-weight: 500;
+
+    &_active {
+      background: #fff;
+      border: 1px solid #E2E3E5;
+
+      .modeSwitch__icon {
+        stroke: #5D5FEF;
+      }
+    }
+  }
+
+  &__icon {
+    stroke: #4D5562;
+    stroke-width: 2;
+    margin: 0 8px 1px 0;
+  }
+}

@@ -1,0 +1,16 @@
+$color: red;
+
+.display {
+  direction: rtl;
+  height: 52px;
+  width: calc(100% - 20px);
+  font-size: 38px;
+  padding: 5px 10px;
+  font-weight: 800;
+  background: #F3F4F6;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

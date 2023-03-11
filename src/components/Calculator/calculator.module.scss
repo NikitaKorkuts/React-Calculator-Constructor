@@ -1,0 +1,17 @@
+.calculator {
+  width: 240px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__component {
+    width: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 9px -5px rgba(34, 60, 80, 0.4);
+    -moz-box-shadow: 0 5px 9px -5px rgba(34, 60, 80, 0.4);
+    box-shadow: 0 5px 9px -5px rgba(34, 60, 80, 0.4);
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+}

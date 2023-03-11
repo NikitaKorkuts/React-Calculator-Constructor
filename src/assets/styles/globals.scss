@@ -1,0 +1,39 @@
+@import "~normalize.css";
+@import "inter.font.scss";
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  max-width: 640px;
+  min-width: 280px;
+  margin: 70px auto 0;
+
+  .calculator-constructor {
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  .modeController {
+    margin: 0 40px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .calculator-constructor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

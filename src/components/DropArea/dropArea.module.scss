@@ -1,0 +1,22 @@
+.dropArea {
+  display: flex;
+  width: 243px;
+  height: 448px;
+  border: 2px dashed #C4C4C4;
+
+  &__info {
+    text-align: center;
+    margin: auto;
+    
+    &_mainText {
+      color: #5D5FEF;
+      font-weight: 500;
+    }
+
+    &_secondaryText {
+      color: #C4C4C4;
+      line-height: 1px;
+      font-weight: 300;
+    }
+  }
+}
