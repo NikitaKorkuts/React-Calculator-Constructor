@@ -16,7 +16,11 @@
   &__zeroBtn {
     @extend  %regular-btn;
 
-    width: 152px;
+    width: 156px;
     height: 48px;
+  }
+
+  &_noEffects {
+    pointer-events: none;
   }
 }

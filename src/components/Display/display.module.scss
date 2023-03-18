@@ -1,5 +1,3 @@
-$color: red;
-
 .display {
   direction: rtl;
   height: 52px;
@@ -10,6 +8,7 @@ $color: red;
   background: #F3F4F6;
   border: none;
   outline: none;
+  cursor: inherit;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

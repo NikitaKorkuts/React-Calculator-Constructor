@@ -1,5 +1,5 @@
 .equalButton {
-  width: 232px;
+  width: 100%;
   height: 64px;
   background: #5D5FEF;
   border: none;
@@ -8,5 +8,5 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  cursor: url('../../assets/icons/cursorIcon.svg'), auto;
+  cursor: inherit;
 }

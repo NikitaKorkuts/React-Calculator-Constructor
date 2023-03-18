@@ -1,4 +1,5 @@
 .modeSwitch {
+  position: relative;
   float: right;
   display: flex;
   align-items: center;
@@ -14,28 +15,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    border: none;
+    outline: none;
     width: calc(50% - 3px);
     height: calc(100% - 5px);
     color: #4D5562;
     font-size: 14px;
     font-weight: 500;
-
-    &_active {
-      background: #fff;
-      border: 1px solid #E2E3E5;
+    transition: all 0.25s ease-in-out;
 
       .modeSwitch__icon {
+        stroke-width: 2;
+        margin: 0 8px 1px 0;
+        z-index: 2;
+      }
+
+      .modeSwitch__icon_active {
         stroke: #5D5FEF;
       }
-    }
   }
 
-  &__icon {
-    stroke: #4D5562;
-    stroke-width: 2;
-    margin: 0 8px 1px 0;
+  &__overlay {
+    position: absolute;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: calc(50% - 3px);
+    height: calc(100% - 5px);
+    transition: all 0.25s ease-in-out;
+    background: #fff;
+    border: 1px solid #E2E3E5;
+  }
+
+  &__overlay_runtime {
+    left: 2px
+  }
+
+  &__overlay_constructor {
+    left: 50%;
+  }
+
+  &__text {
+    z-index: 2;
   }
 }
