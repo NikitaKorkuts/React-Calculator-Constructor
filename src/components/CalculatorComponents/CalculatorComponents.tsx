@@ -5,7 +5,7 @@ import { OperationButtons } from '../OperationButtons/OperationButtons';
 import { EqualButton } from '../EqualButton/EqualButton';
 import { NumericButtons } from '../NumericButtons/NumericButtons';
 import { useAppSelector } from '../../hooks/useAppSelector';
-import { CalculatorComponentsEnum } from '../../types/calculator.types';
+import { CalculatorComponentsEnum } from '../../types/enums';
 
 import s from './calculatorComponents.module.scss';
 

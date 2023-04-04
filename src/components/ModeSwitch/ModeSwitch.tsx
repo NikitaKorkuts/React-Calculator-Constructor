@@ -3,7 +3,7 @@ import React from 'react';
 import EyeIcon from '../../assets/icons/eyeIcon.svg';
 import SelectorIcon from '../../assets/icons/selectorIcon.svg';
 import { useAppSelector } from '../../hooks/useAppSelector';
-import { ModeEnum } from '../../types/modeSwitch.types';
+import { ModeEnum } from '../../types/enums';
 import { useActions } from '../../hooks/useActions';
 
 import s from './modeSwitch.module.scss';

@@ -5,6 +5,13 @@ html {
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 main {
   max-width: 640px;
   min-width: 280px;
@@ -21,6 +28,12 @@ main {
   .modeController {
     margin: 0 40px;
     height: 60px;
+  }
+
+  .calculator {
+    width: 245px;
+    float: right;
+    margin: 0 40px;
   }
 }
 

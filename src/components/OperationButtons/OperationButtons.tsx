@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { useAppSelector } from '../../hooks/useAppSelector';
-import { ModeEnum } from '../../types/modeSwitch.types';
-import { CalculatorComponentsEnum } from '../../types/calculator.types';
+import { OperationsEnum, CalculatorComponentsEnum, ModeEnum } from '../../types/enums';
+import { useActions } from '../../hooks/useActions';
 
 import s from './operationButtons.module.scss';
 
 export const OperationButtons = () => {
-  const { mode } = useAppSelector((state) => state.app);
+  const { mode, isError } = useAppSelector((state) => state.app);
+  const { setOperation } = useActions();
 
   return (
     <div
@@ -16,25 +17,45 @@ export const OperationButtons = () => {
     >
       <button
         type="button"
-        className={`${s.operationButtons__btn} ${mode === ModeEnum.Constructor && s.operationButtons_noEffects}`}
+        onClick={() => setOperation(OperationsEnum.Divide)}
+        disabled={isError}
+        className={`
+          ${s.operationButtons__btn} 
+          ${(mode === ModeEnum.Constructor || isError) && s.operationButtons_noEffects}
+        `}
       >
         /
       </button>
       <button
         type="button"
-        className={`${s.operationButtons__btn} ${mode === ModeEnum.Constructor && s.operationButtons_noEffects}`}
+        disabled={isError}
+        onClick={() => setOperation(OperationsEnum.Multiply)}
+        className={`
+          ${s.operationButtons__btn} 
+          ${(mode === ModeEnum.Constructor || isError) && s.operationButtons_noEffects}
+        `}
       >
         x
       </button>
       <button
         type="button"
-        className={`${s.operationButtons__btn} ${mode === ModeEnum.Constructor && s.operationButtons_noEffects}`}
+        disabled={isError}
+        onClick={() => setOperation(OperationsEnum.Subtract)}
+        className={`
+          ${s.operationButtons__btn} 
+          ${(mode === ModeEnum.Constructor || isError) && s.operationButtons_noEffects}
+        `}
       >
         -
       </button>
       <button
         type="button"
-        className={`${s.operationButtons__btn} ${mode === ModeEnum.Constructor && s.operationButtons_noEffects}`}
+        disabled={isError}
+        onClick={() => setOperation(OperationsEnum.Add)}
+        className={`
+          ${s.operationButtons__btn} 
+          ${(mode === ModeEnum.Constructor || isError) && s.operationButtons_noEffects}
+        `}
       >
         +
       </button>

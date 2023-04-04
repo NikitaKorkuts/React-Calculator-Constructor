@@ -5,7 +5,8 @@ import { CalculatorComponents } from './components/CalculatorComponents/Calculat
 import { DropArea } from './components/DropArea/DropArea';
 import { ModeSwitch } from './components/ModeSwitch/ModeSwitch';
 import { useAppSelector } from './hooks/useAppSelector';
-import { ModeEnum } from './types/modeSwitch.types';
+import { ModeEnum } from './types/enums';
+import { Calculator } from './components/Calculator/Calculator';
 
 const App: React.FC = () => {
   const { mode } = useAppSelector((state) => state.app);
@@ -21,8 +22,8 @@ const App: React.FC = () => {
           <DropArea />
         </div>
       ) : (
-        <div>
-          Calculator
+        <div className="calculator">
+          <Calculator />
         </div>
       )}
 
